@@ -11,9 +11,9 @@
     <header class="topo">
         <nav>
             <ul>
-                <li><a href="index.html"><strong>PÁGINA INICIAL</strong></a></li>
-                <li><a href="html/my_skills.html"><strong>HABILIDADES</strong></a></li>
-                <li><a href="html/my_projects.html"><strong>PROJETOS</strong></a></li>
+                <li><a href="#" data-link="index.html"><strong>PÁGINA INICIAL</strong></a></li>
+                <li><a href="#" data-link="/html/my_skills.html"><strong>HABILIDADES</strong></a></li>
+                <li><a href="#" data-link="/html/my_projects.html"><strong>PROJETOS</strong></a></li>
             </ul>
         </nav>
     </header>
@@ -47,5 +47,14 @@
         <img class="creditos-rodape" src="imagens/rodape/Desenvolvido por Márcio Sá..svg" alt="Logo de Créditos ao Desenvolvedor e Dono do Portfólio :v">
     </footer>
 
+    <script>
+        document.querySelectorAll('a[data-link]').forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault(); // Previne o comportamento padrão
+                const page = this.getAttribute('data-link');
+                window.location.href = page; // Redireciona para a página
+            });
+        });
+    </script>
 </body>
 </html>
