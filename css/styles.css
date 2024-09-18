@@ -38,12 +38,13 @@ nav ul li {
 
 nav a {
     color: #FFC700; /* Cor do texto dos links */
-    text-decoration: none; /* Remove o sublinhado */
+    text-decoration: underline; /* Remove o sublinhado */
     transition: color 0.3s; /* Transição suave para hover */
 }
 
 nav a:hover {
     color: #FFFFFF; /* Cor ao passar o mouse */
+    cursor: pointer;
 }
 
 .topo{
